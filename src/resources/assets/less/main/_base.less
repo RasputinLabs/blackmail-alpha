@@ -1,0 +1,31 @@
+/* Base Styles */
+body {
+	background-color: @dark-gray;
+}
+
+.centered {
+	text-align: center;
+}
+
+.panel-dark {
+	background-color: @dark-gray;
+	border-color: @dark-gray-accent;
+	color: white;
+}
+
+.in-a-circle {
+	border: 1px solid;
+	border-radius: 50%;
+	padding: 1em;
+	line-height: 0.5;
+	display: inline-block;
+}
+
+.btn-primary {
+	background-color: @dark-gray;
+	border-color: @dark-gray;
+	&:hover, &:focus {
+		background-color: @dark-gray-accent;
+		border-color: @dark-gray-accent;
+	}
+}
