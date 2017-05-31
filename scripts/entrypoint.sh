@@ -20,7 +20,6 @@ case "$CMD" in
     kill -INT $PID
     echo "=======> Replacing APP_HOST Environment Variable in nginx virtual host"
     envsubst \$APP_HOST < /tmp/nginx/vhost.conf > /etc/nginx/conf.d/vhost.conf
-    sleep 2s
     npm run production
     echo "=======> Starting Supervisor"
     exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
@@ -40,7 +39,6 @@ case "$CMD" in
     kill -INT $PID
     echo "=======> Replacing APP_HOST Environment Variable in nginx virtual host"
     envsubst \$APP_HOST < /tmp/nginx/vhost.conf > /etc/nginx/conf.d/vhost.conf
-    sleep 2s
     npm run dev
     echo "=======> Starting Supervisor"
     exec /usr/bin/supervisord -c /tmp/supervisord-dev.conf
